@@ -53,7 +53,13 @@ public class HorseBarn
     {
         int spot = 0;
         Horse[] h = new Horse[spaces.length];
-
+        for(Horse x : spaces){
+            if(x != null){
+                h[spot] = x;
+                spot++;
+            }
+        }
+        spaces = h;
     }
 
     /** Returns a string that can be printed, showing which horses are in which spaces
